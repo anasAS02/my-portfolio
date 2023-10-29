@@ -1,0 +1,25 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
+import { TypeAnimation } from 'react-type-animation';
+
+export default function Landing(){
+    return(
+        <main className='text-center mt-48 p-10 flex flex-col gap-52'>
+            <div className='text-3xl text-black dark:text-white'>
+                <TypeAnimation
+                    sequence={[
+                        'I\'M Anas, Frontend (React) developer',
+                        1000,
+                        'I\'M Anas, Full Stack (MERN) developer',
+                        1000,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    style={{fontSize: '2em', display: 'inline-block'}}
+                    repeat={Infinity}
+                />
+            </div>
+            <FontAwesomeIcon icon={faAnglesDown} className='text-yellow-500 text-4xl cursor-pointer animate-bounce' />
+        </main>
+    )
+}
