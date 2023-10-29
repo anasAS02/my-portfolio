@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${kanit.className} bg-white dark:bg-black`}>
+      <body className={`${kanit.className} bg-gradient-to-r from-white to-gray-200 dark:bg-gradient-to-r dark:from-zinc-900 dark:to-black`}>
         {children}
       </body>
     </html>

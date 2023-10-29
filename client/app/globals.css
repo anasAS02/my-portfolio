@@ -35,7 +35,7 @@ nav a::after{
 }
 
 nav a:hover::after,
-nav a.active:hover::after{
+nav a.active::after{
   width: 100%;
 }
 
@@ -63,6 +63,8 @@ nav a.active:hover::after{
   height: 100%;
   transition: 0.3s;
   background-color: transparent;
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
 }
 
 .projects span:hover::after{

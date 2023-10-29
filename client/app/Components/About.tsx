@@ -1,6 +1,6 @@
 export default function About(){
     return(
-        <main className='text-center text-black dark:text-white flex flex-col items-center'>
+        <main id='about' className='text-center text-black dark:text-white flex flex-col items-center mt-96'>
             <h2 className='underline underline-offset-8 text-5xl'>ABOUT</h2>
             <div className='flex flex-col items-center justify-center gap-16 mt-14'>
                 <span className='flex flex-col gap-5 w-2/4'>
