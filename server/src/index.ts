@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 
 import { authRoute } from './routes/authRoute';
 import { projectsRoute } from './routes/projectsRoute';
+import { sendEmail } from './utils/ContactMe';
 
 dotenv.config();
 
@@ -26,6 +27,8 @@ mongoose.connect(URL || '')
 
 app.use('/auth', authRoute);
 app.use('/projects', projectsRoute);
+
+app.post('/contactMe', sendEmail)
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
