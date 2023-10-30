@@ -1,21 +1,18 @@
-import { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 import { asyncWrapper } from "../middlewares/asyncWrapper";
 import nodemailer from 'nodemailer';
 import { httpStatusText } from './httpStatusText';
-import { google } from 'googleapis';
-
-const OAuth2 = google.auth.OAuth2;
-
-const oauth2Client = new OAuth2(
-  '272851122702-2np6licl46q8do8d138gfgu7t9fb6pln.apps.googleusercontent.com',
-  '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',
-  'https://developers.google.com/oauthplayground'
-);
+import AppError from './appError';
 
 const sendEmail = asyncWrapper(
-  async (req: Request, res: Response) => {
+  async (req: Request, res: Response, next: NextFunction) => {
     const { name, email, subject, message } = req.body;
-    console.log(req.body);
+    
+    if(!name || !email || !subject || !message){
+      const error = new AppError('All fields are required', 401, httpStatusText.ERROR);
+      return next(error);
+    }
+
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {

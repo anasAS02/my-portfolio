@@ -6,6 +6,7 @@ import mongoose from 'mongoose';
 import { authRoute } from './routes/authRoute';
 import { projectsRoute } from './routes/projectsRoute';
 import { sendEmail } from './utils/ContactMe';
+import { httpStatusText } from './utils/httpStatusText';
 
 dotenv.config();
 
@@ -29,6 +30,15 @@ app.use('/auth', authRoute);
 app.use('/projects', projectsRoute);
 
 app.post('/contactMe', sendEmail)
+
+app.all('*', (req, res) => {
+  res.status(404).json({ status: 'Error', message: 'This resource is not available' });
+});
+
+app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
+  res.status(err.statusCode || 500).json({ status: err.statusText || httpStatusText.ERROR, message: err.message, code: err.statusCode || 500, data: null });
+});
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
