@@ -9,7 +9,7 @@ router.route('/')
 router.route('/add')
         .post(addProject);
 
-router.route('/:projectId')
+router.route('/project/:projectId')
         .get(getProject);
 
 router.route('/update/:projectId')

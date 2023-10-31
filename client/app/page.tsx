@@ -9,16 +9,41 @@ import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 
 export default function Home() {
+
+  const sections = document.querySelectorAll('section');
+  const links = document.querySelectorAll('nav a');
+
+  addEventListener('scroll', () => {
+
+    sections.forEach((sec) => {
+    const top = window.scrollY;
+    const offset = sec.offsetTop - 150;
+    const height = sec.offsetHeight;
+
+      if(top >= offset && top < offset + height){
+        sec.classList.add('opacity-100');
+        links.forEach((link) => {
+          if(link.getAttribute('id') === sec.getAttribute('id')){
+            link.classList.add('active');
+          }else{
+            link.classList.remove('active');
+          }
+        })
+      }
+
+    })
+  })
+
   return (
     <ThemeProvider enableSystem={true} attribute='class'>
-      <main id='home'>
+      <section id='home'>
         <Header />
         <Landing />
         <About />
         <Projects />
         <Contact />
         <Footer />
-      </main>
+      </section>
     </ThemeProvider>
   )
 }

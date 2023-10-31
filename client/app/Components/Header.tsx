@@ -14,22 +14,13 @@ export default function Header(){
     }
 
     
-    const scroll = (sectionId: string, linkId: string) => {
+    const scroll = (sectionId: string) => {
         const section = document.getElementById(sectionId);
-        const link = document.getElementById(linkId);
-        const links = [document.getElementById('Home'), document.getElementById('About'),document.getElementById('Projects'),document.getElementById('Contact')];
         if(section){
             section.scrollIntoView({ behavior: 'smooth' });
-            if(link){
-                link.classList.add('active');
-            }
-            for(let i = 0; i < links.length; i++){
-                if(links[i] !== link){
-                    links[i]?.classList.remove('active');
-                }
-            }
+        }
     }
-}
+
         return(
         <nav className='bg-slate-100 dark:bg-zinc-900 p-5 flex items-center justify-center fixed top-0 w-full z-50'>
             <div className='flex items-center gap-5 text-xl text-black dark:text-white'>
@@ -41,10 +32,10 @@ export default function Header(){
                 >
                 <FontAwesomeIcon icon={!darkMode ? faSun : faMoon} />
                 </button>
-                <Link href='/' id='Home' className='active duration-200 hover:text-yellow-500' onClick={() => scroll('home', 'Home')}>Home</Link>
-                <Link href='' id='About' className='duration-200 hover:text-yellow-500' onClick={() => scroll('about', 'About')}>About</Link>
-                <Link href='' id='Projects' className='duration-200 hover:text-yellow-500' onClick={() => scroll('projects', 'Projects')}>Projects</Link>
-                <Link href='' id='Contact' className='duration-200 hover:text-yellow-500' onClick={() => scroll('contact', 'Contact')}>Contact</Link>
+                <Link href='/' id='home' className='active duration-200 hover:text-yellow-500' onClick={() => scroll('home')}>Home</Link>
+                <Link href='' id='about' className='duration-200 hover:text-yellow-500' onClick={() => scroll('about')}>About</Link>
+                <Link href='' id='projects' className='duration-200 hover:text-yellow-500' onClick={() => scroll('projects')}>Projects</Link>
+                <Link href='' id='contact' className='duration-200 hover:text-yellow-500' onClick={() => scroll('contact')}>Contact</Link>
             </div>
         </nav>
     )

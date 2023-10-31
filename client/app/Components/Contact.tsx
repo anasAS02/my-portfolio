@@ -28,13 +28,11 @@ export default function Contact(){
     setForm({...form, [name]: value})
     }
 
-    const sendEmail = (e: React.FormEvent, form: formData) => {
+    const sendEmail = async (e: React.FormEvent, form: formData) => {
         e.preventDefault();
         setLoading(true);
         try{
-            const res = axios.post(SEND_EMAIL, form);
-            console.log(res)
-            setError(null);
+            await axios.post(SEND_EMAIL, form);
             setLoading(false);
             setForm({
                 name: "",
@@ -42,19 +40,19 @@ export default function Contact(){
                 subject: "",
                 message: "",
             });
+            setError(null);
             setTimeout(() => {
                 setSuccess('Email sent successfully');
             }, 3000)
             setSuccess(null);
         }catch(err: any){
-            setError(err.response?.data?.message);
+            setError('Email not sent');
             console.log(err)
         }
     }
-    console.log(error)
 
     return(
-        <main id='contact' className='flex flex-col items-center justify-center gap-10 mt-16'>
+        <section id='contact' className='opacity-25 duration-300 flex flex-col items-center justify-center gap-10 mt-16'>
             <h2 className='underline underline-offset-8 text-5xl text-center'>CONTACT ME</h2>
             <form className='flex flex-col items-center justify-center gap-10' onSubmit={(e) => sendEmail(e, form)}>
                 <input autoFocus type='text' name='name' value={form.name} onChange={(e) => handleChange(e)} placeholder='Your name' className='bg-slate-200 text-black p-5 border-none outline-none rounded-md' />
@@ -72,6 +70,6 @@ export default function Contact(){
                 {success && <p className='p-5 bg-black dark:bg-white text-green-600 rounded-md text-center text-lg'>{success}</p>}
                 {error && <p className='p-5 bg-black dark:bg-white text-red-600 rounded-md text-center text-lg'>{error}</p>}
             </form>
-        </main>
+        </section>
     )
 }

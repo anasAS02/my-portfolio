@@ -31,7 +31,8 @@ const addProject = asyncWrapper(
     });
 
     await project.save();
-    res.status(201).json({ status: httpStatusText.SUCCESS, data: project });
+    const projects = await Project.find();
+    res.status(201).json({ status: httpStatusText.SUCCESS, data: projects });
   }
 );
 
@@ -46,8 +47,9 @@ const getProject = asyncWrapper(
 const updateProject = asyncWrapper(
   async (req: Request, res: Response) => {
     const projectId = req.params.projectId;
-    const updatedProject = await Project.updateOne({ _id: projectId }, { $set: { ...req.body } });
-    res.status(200).json({ status: httpStatusText.SUCCESS, data: null });
+    await Project.updateOne({ _id: projectId }, { $set: { ...req.body } });
+    const projects = await Project.find();
+    res.status(200).json({ status: httpStatusText.SUCCESS, data: projects });
   }
 );
 
@@ -55,7 +57,8 @@ const deleteProject = asyncWrapper(
   async (req: Request, res: Response) => {
     const projectId = req.params.projectId;
     await Project.deleteOne({ _id: projectId });
-    res.status(200).json({ status: httpStatusText.SUCCESS, data: null });
+    const projects = await Project.find();
+    res.status(200).json({ status: httpStatusText.SUCCESS, data: projects });
   }
 );
 
