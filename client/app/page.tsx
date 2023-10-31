@@ -10,8 +10,8 @@ import Footer from "./Components/Footer";
 
 export default function Home() {
 
-  const sections = document.querySelectorAll('section');
-  const links = document.querySelectorAll('nav a');
+  const sections = document?.querySelectorAll('section');
+  const links = document?.querySelectorAll('nav a');
 
   addEventListener('scroll', () => {
 

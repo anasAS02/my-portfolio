@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer(){
     return(
-        <footer id='footer' className='bg-slate-100 dark:bg-zinc-900 text-black dark:text-white text-center p-5 mt-14 flex flex-col items-center justify-center gap-5'>
+        <footer id='footer' className='bg-slate-100 dark:bg-zinc-900 text-black dark:text-white text-center p-5 mt-14 flex flex-col items-center justify-center gap-5 w-full'>
                 <span className='flex gap-6'>
                     <Link href='/' target={"_blank"}>
                         <FontAwesomeIcon icon={faLinkedin} className='text-4xl text-black dark:text-white duration-200 hover:text-blue-600  dark:hover:text-blue-600' />
