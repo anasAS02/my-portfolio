@@ -46,8 +46,9 @@ export default function Contact(){
             }, 3000)
             setSuccess(null);
         }catch(err: any){
-            setError('Email not sent');
+            setError(err.response?.data?.message);
             console.log(err)
+            setLoading(false);
         }
     }
 

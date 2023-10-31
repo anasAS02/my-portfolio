@@ -23,10 +23,13 @@ export default function Home() {
       if(top >= offset && top < offset + height){
         sec.classList.add('opacity-100');
         links.forEach((link) => {
-          if(link.getAttribute('id') === sec.getAttribute('id')){
-            link.classList.add('active');
-          }else{
-            link.classList.remove('active');
+          const sectionId = sec.getAttribute('id');
+          if(sectionId){
+            if(link.classList.contains(sectionId)){
+              link.classList.add('active');
+            }else{
+              link.classList.remove('active');
+            }
           }
         })
       }

@@ -16,11 +16,10 @@ export default function Header(){
     
     const scroll = (sectionId: string) => {
         const section = document.getElementById(sectionId);
-        if(section){
+        if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
         }
     }
-
         return(
         <nav className='bg-slate-100 dark:bg-zinc-900 p-5 flex items-center justify-center fixed top-0 w-full z-50'>
             <div className='flex items-center gap-5 text-xl text-black dark:text-white'>
@@ -32,10 +31,10 @@ export default function Header(){
                 >
                 <FontAwesomeIcon icon={!darkMode ? faSun : faMoon} />
                 </button>
-                <Link href='/' id='home' className='active duration-200 hover:text-yellow-500' onClick={() => scroll('home')}>Home</Link>
-                <Link href='' id='about' className='duration-200 hover:text-yellow-500' onClick={() => scroll('about')}>About</Link>
-                <Link href='' id='projects' className='duration-200 hover:text-yellow-500' onClick={() => scroll('projects')}>Projects</Link>
-                <Link href='' id='contact' className='duration-200 hover:text-yellow-500' onClick={() => scroll('contact')}>Contact</Link>
+                <Link href='' className='home duration-200 hover:text-yellow-500' onClick={() => scroll('home')}>Home</Link>
+                <Link href='' className='about duration-200 hover:text-yellow-500' onClick={() => scroll('about')}>About</Link>
+                <Link href='' className='projects duration-200 hover:text-yellow-500' onClick={() => scroll('projects')}>Projects</Link>
+                <Link href='' className='contact duration-200 hover:text-yellow-500' onClick={() => scroll('contact')}>Contact</Link>
             </div>
         </nav>
     )
