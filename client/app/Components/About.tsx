@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 export default function About(){
     return(
-        <section id='about' className='opacity-25 duration-300 text-center text-black dark:text-white flex flex-col items-center mt-96'>
+        <section id='about' className='opacity-25 duration-300 text-center text-black dark:text-white flex flex-col items-center mt-48'>
             <h2 className='underline underline-offset-8 text-5xl'>ABOUT</h2>
             <div className='flex flex-col items-center justify-center gap-16 mt-14'>
                 <span className='flex flex-col gap-5 w-2/4'>

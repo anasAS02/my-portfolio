@@ -27,7 +27,7 @@ export default function project({params}: any){
                     <h2 className='text-4xl'>{project.title}</h2>
                     <p className='text-xl text-gray-950 dark:text-slate-300'>This page contains the case study of Crown Website Template which includes the Project Overview, Tools Used and Live Links to the official product.</p>
                     <Link target={"_blank"} href={project?.liveLink} className='p-5 rounded-lg duration-200 bg-yellow-500 hover:bg-yellow-400 text-black'>Live Link</Link>
-                    <img src={`${project.img}.png`} alt={project.title} />
+                    <img src={`${project.img}.png`} alt={project.title} className='w-full' />
                 </div>
                 <div className='p-10'>
                     <span className='flex flex-col gap-4'>

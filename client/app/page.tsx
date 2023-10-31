@@ -21,6 +21,7 @@ export default function Home() {
     const height = sec.offsetHeight;
 
       if(top >= offset && top < offset + height){
+        sec.classList.remove('opacity-25');
         sec.classList.add('opacity-100');
         links.forEach((link) => {
           const sectionId = sec.getAttribute('id');
