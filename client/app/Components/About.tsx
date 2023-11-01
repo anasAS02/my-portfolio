@@ -13,11 +13,9 @@ export default function About(){
             <h2 className='underline underline-offset-8 text-5xl'>ABOUT</h2>
             <div className='flex flex-col items-center justify-center gap-16 mt-14'>
                 <span className='flex flex-col gap-5 w-2/4'>
-                    <p className='text-xl leading-8 text-blue-500 dark:text-yellow-500'>
-                        I am a frontend web developer using ReactJS. I have a passion for creating beautiful and
-                        functional user interfaces that provide a seamless browsing experience. I am always looking to improve my skills and stay up-to-date with the latest web development technologies.
-                        I am excited to work on new projects and collaborate with other developers
-                        to create amazing websites.
+                    <p className='text-2xl leading-10 text-blue-500 dark:text-yellow-500'>
+                    I am a frontend developer using React.js and Next.js, as well as a full-stack (MERN) developer. Here you will find several projects I've worked on, showcasing my skills in HTML, CSS, Bootstrap, Tailwind CSS, Sass, JavaScript, TypeScript, React.js, Next.js, MongoDB, Node.js, and Express.js.
+                    In addition to that, I am proficient in using Git, Github I am always eager to learn and improve my skills, not only in the mentioned technologies but also in others, as I have a strong willingness to learn and grow further.
                     </p>
                 </span>
                     <div className='flex justify-center items-center flex-wrap gap-5 text-8xl'>

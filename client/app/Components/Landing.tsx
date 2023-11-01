@@ -18,7 +18,7 @@ export default function Landing(){
                     style={{fontSize: '2em', display: 'inline-block'}}
                     repeat={Infinity}
                 />
-                <p className='mt-12 text-xl'>My passion lies in crafting responsive web applications that blend seamless user experiences with robust functionality.</p>
+                <p className='mt-12 text-2xl'>I enjoy building new projects daily and constantly strive to learn more.</p>
             </div>
         </main>
     )
