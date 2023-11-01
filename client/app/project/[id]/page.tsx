@@ -15,8 +15,10 @@ export default function project({params}: any){
     const projectId = params.id;
     useEffect(() => {
         fetchProject(GET_PROJECT + projectId).then((data) => setProject(data[0]));
+        if(project){
+            document.title = project.title;
+        }
     }, [projectId])
-    console.log(project)
     return(
     <ThemeProvider enableSystem={true} attribute='class'>
         <main>
