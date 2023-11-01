@@ -13,7 +13,7 @@ export default function project({params}: any){
     const [project, setProject] = useState<projectData>()
     const projectId = params.id;
     useEffect(() => {
-        fetchProject(GET_PROJECT + projectId).then((data) => setProject(data[0]));
+        fetchProject(GET_PROJECT + projectId).then((data) => setProject(data));
     }, [projectId])
     return(
     <ThemeProvider enableSystem={true} attribute='class'>
