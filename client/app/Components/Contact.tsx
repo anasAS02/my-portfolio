@@ -54,7 +54,7 @@ export default function Contact(){
 
     return(
         <section id='contact' className='opacity-25 duration-300 flex flex-col items-center justify-center gap-10 mt-16'>
-            <h2 className='underline underline-offset-8 text-5xl text-center'>CONTACT ME</h2>
+            <h2 className='underline underline-offset-8 text-5xl max-md:text-2xl text-center'>CONTACT ME</h2>
             <form className='flex flex-col items-center justify-center gap-10' onSubmit={(e) => sendEmail(e, form)}>
                 <input autoFocus type='text' name='name' value={form.name} onChange={(e) => handleChange(e)} placeholder='Your name' className='bg-slate-200 text-black p-5 border-none outline-none rounded-md' />
                 <input type='email' name='email' value={form.email} onChange={(e) => handleChange(e)} placeholder='Your email' className='bg-slate-200 text-black p-5 border-none outline-none rounded-md' />
@@ -66,7 +66,7 @@ export default function Contact(){
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
                     </span>
                 :
-                <input type='submit' value='Send Message' className='duration-300 bg-blue-400 hover:bg-blue-300 text-black p-5 rounded-xl cursor-pointer' />
+                <input type='submit' value='Send Message' className='duration-300 bg-blue-400 hover:bg-blue-300 text-black p-5 max-md:p-2 rounded-xl cursor-pointer' />
                 }
                 {success && <p className='p-5 bg-black dark:bg-white text-green-600 rounded-md text-center text-lg'>{success}</p>}
                 {error && <p className='p-5 bg-black dark:bg-white text-red-600 rounded-md text-center text-lg'>{error}</p>}

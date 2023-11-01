@@ -5,7 +5,7 @@ import { TypeAnimation } from 'react-type-animation';
 export default function Landing(){
     return(
         <main className='text-center mt-48 p-10 flex flex-col gap-52'>
-            <div className='text-3xl max-md:text-lg max-sm:text-base text-black dark:text-white'>
+            <div className='text-3xl max-md:text-sm max-sm:text-base text-black dark:text-white'>
                 <TypeAnimation
                     sequence={[
                         'I\'M Anas, a React Frontend Developer',
@@ -18,7 +18,7 @@ export default function Landing(){
                     style={{fontSize: '2em', display: 'inline-block'}}
                     repeat={Infinity}
                 />
-                <p className='mt-12 text-2xl'>I enjoy building new projects daily and constantly strive to learn more.</p>
+                <p className='mt-12 text-2xl max-md:text-sm'>I enjoy building new projects daily and constantly strive to learn more.</p>
             </div>
         </main>
     )

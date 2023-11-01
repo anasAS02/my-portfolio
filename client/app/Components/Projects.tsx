@@ -12,7 +12,7 @@ export default function Projects(){
     
     return(
         <section id='projects' className='opacity-25 duration-300 projects flex flex-col items-center justify-center gap-10 mt-16'>
-            <h2 className='underline underline-offset-8 text-5xl text-center'>My Projects</h2>
+            <h2 className='underline underline-offset-8 text-5xl max-md:text-2xl text-center'>My Projects</h2>
             <div className='grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-5 items-center justify-center p-10'>
                 {projects && projects.map((project: projectData) => (
                     <span className='relative' key={project._id}>

@@ -8,13 +8,13 @@ export default function Footer(){
         <footer id='footer' className='bg-slate-100 dark:bg-zinc-900 text-black dark:text-white text-center p-5 mt-14 flex flex-col items-center justify-center gap-5 w-full'>
                 <span className='flex gap-6'>
                     <Link href='/' target={"_blank"}>
-                        <FontAwesomeIcon icon={faLinkedin} className='text-4xl text-black dark:text-white duration-200 hover:text-blue-600  dark:hover:text-blue-600' />
+                        <FontAwesomeIcon icon={faLinkedin} className='text-4xl max-md:text-2xl text-black dark:text-white duration-200 hover:text-blue-600  dark:hover:text-blue-600' />
                     </Link>
                     <Link href='/' target={"_blank"}>
-                        <FontAwesomeIcon icon={faGithub} className='text-4xl text-black dark:text-white duration-200 hover:text-orange-600 dark:hover:text-orange-600' />
+                        <FontAwesomeIcon icon={faGithub} className='text-4xl max-md:text-2xl text-black dark:text-white duration-200 hover:text-orange-600 dark:hover:text-orange-600' />
                     </Link>
                     <Link href='/' target={"_blank"}>
-                        <FontAwesomeIcon icon={faEnvelope} className='text-4xl text-black dark:text-white duration-200 hover:text-red-600 dark:hover:text-red-600' />
+                        <FontAwesomeIcon icon={faEnvelope} className='text-4xl max-md:text-2xl text-black dark:text-white duration-200 hover:text-red-600 dark:hover:text-red-600' />
                     </Link>
                 </span>
             <p>© Copyright 2023. Made by <span className='text-red-500'>Anas</span></p>

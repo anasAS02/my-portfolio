@@ -31,10 +31,10 @@ export default function Header(){
                 >
                 <FontAwesomeIcon icon={!darkMode ? faSun : faMoon} />
                 </button>
-                <Link href='/' className='home duration-200 hover:text-yellow-500' onClick={() => scroll('home')}>Home</Link>
-                <Link href='/' className='about duration-200 hover:text-yellow-500' onClick={() => scroll('about')}>About</Link>
-                <Link href='/' className='projects duration-200 hover:text-yellow-500' onClick={() => scroll('projects')}>Projects</Link>
-                <Link href='/' className='contact duration-200 hover:text-yellow-500' onClick={() => scroll('contact')}>Contact</Link>
+                <Link href='/' className='home duration-200 hover:text-yellow-500 max-md:text-sm' onClick={() => scroll('home')}>Home</Link>
+                <Link href='/' className='about duration-200 hover:text-yellow-500 max-md:text-sm' onClick={() => scroll('about')}>About</Link>
+                <Link href='/' className='projects duration-200 hover:text-yellow-500 max-md:text-sm' onClick={() => scroll('projects')}>Projects</Link>
+                <Link href='/' className='contact duration-200 hover:text-yellow-500 max-md:text-sm' onClick={() => scroll('contact')}>Contact</Link>
             </div>
         </nav>
     )
