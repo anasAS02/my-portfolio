@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import {projectData} from '@/app/Utils/FetchProjects';
 import Header from "@/app/Components/Header";
 import Link from "next/link";
-import Image from "next/image";
 import { ThemeProvider } from "next-themes";
 import Footer from "@/app/Components/Footer";
 
@@ -15,9 +14,6 @@ export default function project({params}: any){
     const projectId = params.id;
     useEffect(() => {
         fetchProject(GET_PROJECT + projectId).then((data) => setProject(data[0]));
-        if(project){
-            document.title = project.title;
-        }
     }, [projectId])
     return(
     <ThemeProvider enableSystem={true} attribute='class'>

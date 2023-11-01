@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:4000/';
+const BASE_URL = 'https://portfolio-ob8a.onrender.com/';
 
 export const SEND_EMAIL = `${BASE_URL}contactMe`;
 

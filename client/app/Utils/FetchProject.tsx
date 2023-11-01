@@ -15,6 +15,9 @@ export const fetchProject = async(url: string) => {
     try{
         const res = await axios.get(url);
         const projects = res.data.data;
+        
+            document.title = projects[0].title;
+        
         return projects;
     }catch(err){
         console.log(err)
