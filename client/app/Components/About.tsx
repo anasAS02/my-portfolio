@@ -13,16 +13,13 @@ export default function About(){
             <h2 className='underline underline-offset-8 text-5xl'>ABOUT</h2>
             <div className='flex flex-col items-center justify-center gap-16 mt-14'>
                 <span className='flex flex-col gap-5 w-2/4'>
-                    <h2 className='text-4xl text-blue-500 dark:text-yellow-500'>Get to know me!</h2>
-                    <p className='text-xl leading-8'>
+                    <p className='text-xl leading-8 text-blue-500 dark:text-yellow-500'>
                         I am a frontend web developer using ReactJS. I have a passion for creating beautiful and
                         functional user interfaces that provide a seamless browsing experience. I am always looking to improve my skills and stay up-to-date with the latest web development technologies.
                         I am excited to work on new projects and collaborate with other developers
                         to create amazing websites.
                     </p>
                 </span>
-                <span className='flex flex-col gap-5 w-2/4'>
-                    <h2 className='text-4xl text-blue-500 dark:text-yellow-500'>My Skills</h2>
                     <div className='flex justify-center items-center flex-wrap gap-5 text-8xl'>
                         <FontAwesomeIcon className='duration-200 text-orange-500 hover:text-orange-400' icon={faHtml5} />
                         <FontAwesomeIcon className='duration-200 text-blue-500 hover:text-blue-400' icon={faCss3Alt} />
@@ -38,9 +35,7 @@ export default function About(){
                         <FontAwesomeIcon className='duration-200 text-green-400 hover:text-green-300' icon={faNode} />
                         <FontAwesomeIcon className='duration-200 text-orange-600 hover:text-orange-500' icon={faGit} />
                         <FontAwesomeIcon className='duration-200 text-black dark:text-white' icon={faGithub} />
-
                     </div>
-                </span>
             </div>
             <button className='mt-14 duration-300 bg-blue-400 hover:bg-blue-300 text-black p-5 rounded-xl'>Download Resume</button>
         </section>
