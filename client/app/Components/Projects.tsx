@@ -8,7 +8,7 @@ export default function Projects(){
 
     useEffect(() => {
         fetchProjects(GET_PROJECTS).then((data) => setProjects(data));
-    }, [])
+    }, [projects])
     
     return(
         <section id='projects' className='opacity-25 duration-300 projects flex flex-col items-center justify-center gap-10 mt-16'>

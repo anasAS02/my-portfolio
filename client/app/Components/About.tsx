@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBootstrap, faCss3Alt, faGit, faGithub, faHtml5, faNode, faReact, faSass, faSquareJs } from '@fortawesome/free-brands-svg-icons';
+import Image from 'next/image';
 import tailwind from '../assets/tailwindCSS.png';
 import typeScript from '../assets/ts.png';
 import mongoDB from '../assets/mongo.png';
 import expressJS from '../assets/exJS.png';
 import nextJS from '../assets/nextjs.png';
-import Image from 'next/image';
 
 export default function About(){
     return(
