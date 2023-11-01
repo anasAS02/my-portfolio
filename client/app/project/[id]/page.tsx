@@ -19,7 +19,7 @@ export default function project({params}: any){
     <ThemeProvider enableSystem={true} attribute='class'>
         <main>
             <Header />
-            {typeof window !== 'undefined' && project &&
+            {project &&
             <section>
                 <div className='flex flex-col items-center gap-10 text-center p-10 mt-48'>
                     <h2 className='text-4xl'>{project.title}</h2>
