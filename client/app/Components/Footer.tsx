@@ -17,7 +17,7 @@ export default function Footer(){
                         <FontAwesomeIcon icon={faEnvelope} className='text-4xl max-md:text-2xl text-black dark:text-white duration-200 hover:text-red-600 dark:hover:text-red-600' />
                     </Link>
                 </span>
-            <p>© Copyright 2023. Made by <span className='text-red-500'>Anas</span></p>
+            <p>Copyrights reserved to <span className='font-bold text-red-500'>Anas</span> - 2023&copy;</p>
         </footer>
     )
 }
