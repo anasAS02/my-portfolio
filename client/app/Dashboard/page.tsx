@@ -239,7 +239,7 @@ export default function Dashboard(){
                         <span className='flex items-center gap-5' key={project._id}>
                             <img className='w-2/4' src={`${project.img}.png`} alt={project.title}/>
                             <span className='flex flex-col gap-3'>
-                                <Link className='duration-200 text-lg text-white hover:text-yellow-500' href={`project/${project._id}`}>{project.title}</Link>
+                                <Link target={"_blank"} className='duration-200 text-2xl text-white hover:text-yellow-500' href={`project/${project._id}`}>{project.title}</Link>
                                 <span className='flex gap-3 items-center'>
                                     <FontAwesomeIcon onClick={() => startUpdate(project._id)} icon={faPenToSquare} className='text-black dark:text-white hover:text-blue-400 dark:hover:text-blue-400 text-lg duration-200 cursor-pointer' />
                                     <FontAwesomeIcon onClick={() => handleDelete(project._id)} icon={faTrash} className='text-black dark:text-white hover:text-red-500 dark:hover:text-red-500 text-lg duration-200 cursor-pointer' />

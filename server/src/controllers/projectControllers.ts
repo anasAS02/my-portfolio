@@ -6,7 +6,7 @@ import {asyncWrapper} from '../middlewares/asyncWrapper';
 
 const getAllProjects = asyncWrapper(
   async (req: Request, res: Response) => {
-    const projects = await Project.find();
+    const projects = await Project.find().sort({ createdAt: -1 });
     res.status(200).json({ status: httpStatusText.SUCCESS, data: projects });
   }
 );
