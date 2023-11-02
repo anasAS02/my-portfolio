@@ -13,7 +13,7 @@ export default function Footer(){
                     <Link href='https://github.com/anasAS02' target={"_blank"}>
                         <FontAwesomeIcon icon={faGithub} className='text-4xl max-md:text-2xl text-black dark:text-white duration-200 hover:text-orange-600 dark:hover:text-orange-600' />
                     </Link>
-                    <Link href='astalaat3@gmail.com' target={"_blank"}>
+                    <Link href='mailto:astalaat3@gmail.com' target={"_blank"}>
                         <FontAwesomeIcon icon={faEnvelope} className='text-4xl max-md:text-2xl text-black dark:text-white duration-200 hover:text-red-600 dark:hover:text-red-600' />
                     </Link>
                 </span>
