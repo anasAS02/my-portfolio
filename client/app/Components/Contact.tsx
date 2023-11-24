@@ -33,7 +33,6 @@ export default function Contact(){
         setLoading(true);
         try{
             await axios.post(SEND_EMAIL, form);
-            setLoading(false);
             setForm({
                 name: "",
                 email: "",
@@ -48,6 +47,7 @@ export default function Contact(){
         }catch(err: any){
             setError(err.response?.data?.message);
             console.log(err)
+        }finally{
             setLoading(false);
         }
     }

@@ -1,9 +1,9 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
 import nodemailer from 'nodemailer';
 
-const sendEmail = async(req: Request, res: Response, next: NextFunction) => {
-  const { name, email, subject, message } = req.body;
-	try {
+const sendEmail = async(req: Request, res: Response) => {
+  const {name, email, subject, message} = req.body;
+  try {
 		const transporter = nodemailer.createTransport({
 			host: process.env.HOST,
 			service: process.env.SERVICE,
@@ -17,9 +17,9 @@ const sendEmail = async(req: Request, res: Response, next: NextFunction) => {
 
 		await transporter.sendMail({
 			from: email,
-			to: process.env.USER,
-			subject: subject,
-			text: `${name} - ${message}`,
+			to: process.env.EMAIL_USER,
+			subject:  `${name} - ${subject}`,
+			text: message,
 		});
 		console.log("Email sent successfully");
 	} catch (error) {
@@ -27,5 +27,4 @@ const sendEmail = async(req: Request, res: Response, next: NextFunction) => {
 		console.log(error);
 	}
 };
-
 export { sendEmail };
