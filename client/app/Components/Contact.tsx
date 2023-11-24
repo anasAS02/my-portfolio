@@ -40,10 +40,10 @@ export default function Contact(){
                 message: "",
             });
             setError(null);
+            setSuccess('Email sent successfully');
             setTimeout(() => {
-                setSuccess('Email sent successfully');
+                setSuccess(null);
             }, 3000)
-            setSuccess(null);
         }catch(err: any){
             setError(err.response?.data?.message);
             console.log(err)
