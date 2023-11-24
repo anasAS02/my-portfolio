@@ -33,7 +33,6 @@ export default function About(){
                         <FontAwesomeIcon className='duration-200 text-black dark:text-white' icon={faGithub} />
                     </div>
             </div>
-            <button className='mt-14 duration-300 bg-blue-400 hover:bg-blue-300 text-black p-5 max-md:p-2 rounded-xl'>Download Resume</button>
         </section>
     )
 }

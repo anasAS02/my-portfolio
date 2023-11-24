@@ -61,6 +61,14 @@ export default function project({params}: any){
                             </span>
                         </span>
                     }
+                    {project.title === 'AS-Shop' &&
+                        <span className='flex flex-col gap-4 mt-10'>
+                            <h2 className='text-2xl'>Admin Account</h2>
+                            <span className='flex items-center gap-5'>
+                                <p className='text-xl text-blue-400 dark:text-yellow-500'>asShop660@gmail.com - 00000000 </p>
+                            </span>
+                        </span>
+                    }
                     <span className='flex flex-col gap-4 mt-10'>
                         <h2 className='text-2xl'>Source Code</h2>
                         <span className='flex items-center gap-5'>
