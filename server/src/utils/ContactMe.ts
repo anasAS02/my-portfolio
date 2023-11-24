@@ -22,10 +22,10 @@ const sendEmail = asyncWrapper(
     });
 
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: email,
+      from: email,
+      to: process.env.EMAIL_USER,
       subject: `${name} - ${subject}`,
-      text: message,
+      text: `${message} - ${email}`,
     };
 
     transporter.sendMail(mailOptions, (error: any, info: any) => {
