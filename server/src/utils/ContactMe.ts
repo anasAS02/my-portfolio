@@ -22,8 +22,8 @@ const sendEmail = asyncWrapper(
     });
 
     const mailOptions = {
-      from: email,
-      to: process.env.EMAIL_USER,
+      from: process.env.EMAIL_USER,
+      to: email,
       subject: `${name} - ${subject}`,
       text: message,
     };
