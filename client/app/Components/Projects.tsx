@@ -15,7 +15,9 @@ export default function Projects(){
         <section id='projects' className='opacity-25 duration-300 projects flex flex-col items-center justify-center gap-10 mt-16'>
             <h2 className='underline underline-offset-8 text-5xl max-md:text-2xl text-center'>My Projects</h2>
             <div className='grid grid-cols-2 max-sm:grid-cols-1 gap-5 items-center justify-center p-10'>
-                {projects &&
+                {loading ?
+                <p className='text-5xl max-md:text-2xl absolute left-2/4 -translate-x-2/4 -translate-y-2/4 animate-pulse'>Loading ...</p>
+                :
                 projects.map((project: projectData) => (
                     loading ? 
                         <div className="relative items-center block max-w-sm p-6 bg-white border border-gray-100 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-700">
