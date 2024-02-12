@@ -1,4 +1,4 @@
-const BASE_URL = 'https://my-portfolio-production-4bfc.up.railway.app/';
+const BASE_URL = 'https://my-portfolio-kmj1.onrender.com/';
 
 export const SEND_EMAIL = `${BASE_URL}contactMe`;
 

@@ -9,7 +9,14 @@ export default function Projects(){
 
     useEffect(() => {
         fetchProjects(GET_PROJECTS).then((data) => {setProjects(data); setLoading(false)});
+        showDelayAlert();
     }, [])
+
+    const showDelayAlert = () => {
+        setTimeout(() => {
+          alert("Please note: Data may take a few seconds to load due to server limitations.");
+        }, 3000);
+      };
     
     return(
         <section id='projects' className='opacity-25 duration-300 projects flex flex-col items-center justify-center gap-10 mt-16'>

@@ -44,14 +44,14 @@ export default function project({params}: any){
                     <span className='flex flex-col gap-4 mt-10'>
                         <h2 className='text-2xl'>Tools Used</h2>
                         <span className='flex items-center justify-start gap-5 flex-wrap'>
-                            {project.tools.map((tool) => <p className='p-2 duration-200 bg-slate-300 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-black dark:text-white rounded-md'>{tool}</p>)}
+                            {project.tools.map((tool, i) => <p key= { i } className='p-2 duration-200 bg-slate-300 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-black dark:text-white rounded-md'>{tool}</p>)}
                         </span>
                     </span>
                     {project.test.length > 0 &&
                         <span className='flex flex-col gap-4 mt-10'>
                             <h2 className='text-2xl'>Fake Payment for test</h2>
                             <span className='flex flex-col items-start gap-5'>
-                                {project.test.map((tst) => <p className='text-xl text-blue-400 dark:text-yellow-500'>{tst}</p>)}
+                                {project.test.map((tst, i) => <p key={ i } className='text-xl max-md:text-sm text-blue-400 dark:text-yellow-500'>{tst}</p>)}
                             </span>
                         </span>
                     }
@@ -59,7 +59,7 @@ export default function project({params}: any){
                         <span className='flex flex-col gap-4 mt-10'>
                             <h2 className='text-2xl'>Admin Account</h2>
                             <span className='flex items-center gap-5'>
-                                <p className='text-xl text-blue-400 dark:text-yellow-500'>admin@gmail.com - 11111111 </p>
+                                <p className='text-xl max-md:text-sm text-blue-400 dark:text-yellow-500'>admin@gmail.com - 11111111 </p>
                             </span>
                         </span>
                     }
@@ -67,7 +67,7 @@ export default function project({params}: any){
                         <span className='flex flex-col gap-4 mt-10'>
                             <h2 className='text-2xl'>Admin Account</h2>
                             <span className='flex items-center gap-5'>
-                                <p className='text-xl text-blue-400 dark:text-yellow-500'>admin@gmail.com - 1111 </p>
+                                <p className='text-xl max-md:text-sm text-blue-400 dark:text-yellow-500'>admin@gmail.com - 1111 </p>
                             </span>
                         </span>
                     }
@@ -75,7 +75,7 @@ export default function project({params}: any){
                         <span className='flex flex-col gap-4 mt-10'>
                             <h2 className='text-2xl'>Admin Account</h2>
                             <span className='flex items-center gap-5'>
-                                <p className='text-xl text-blue-400 dark:text-yellow-500'>asShop660@gmail.com - 00000000 </p>
+                                <p className='text-xl max-md:text-sm text-blue-400 dark:text-yellow-500'>asShop660@gmail.com - 00000000 </p>
                             </span>
                         </span>
                     }
