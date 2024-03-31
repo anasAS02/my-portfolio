@@ -11,11 +11,6 @@ export default function Projects(){
         fetchProjects(GET_PROJECTS).then((data) => {setProjects(data); setLoading(false)});
     }, [])
 
-    useEffect(() => {
-        alert("Please note: Data may take a few seconds to load due to server limitations.");
-      }, [])
-    
-    
     return(
         <section id='projects' className='opacity-25 duration-300 projects flex flex-col items-center justify-center gap-10 mt-16'>
             <h2 className='underline underline-offset-8 text-5xl max-md:text-2xl text-center'>My Projects</h2>
