@@ -8,9 +8,9 @@ export default function Landing(){
             <div className='text-3xl max-md:text-sm max-sm:text-base text-black dark:text-white'>
                 <TypeAnimation
                     sequence={[
-                        'I\'M Anas, a React Frontend Developer',
+                        'I\'M Anas, a Frontend React Developer',
                         1000,
-                        'I\'M Anas, a MERN Full Stack Developer',
+                        'I\'M Anas, a Frontend Next Developer',
                         1000,
                     ]}
                     wrapper="span"

@@ -13,7 +13,7 @@ export default function About(){
             <h2 className='underline underline-offset-8 text-5xl max-md:text-2xl'>ABOUT</h2>
             <div className='flex flex-col items-center justify-center gap-10 mt-14 p-5'>
                     <p className='text-2xl leading-10 text-blue-500 dark:text-yellow-500 max-md:text-sm'>
-                    I am a frontend developer using React.js and Next.js, as well as a full-stack (MERN) developer. Here you will find several projects I've worked on, showcasing my skills in HTML, CSS, Bootstrap, Tailwind CSS, Sass, JavaScript, TypeScript, React.js, Next.js, MongoDB, Node.js, and Express.js.
+                    I am a frontend developer using React.js and Next.js. Here you will find several projects I've worked on, showcasing my skills in HTML, CSS, Bootstrap, Tailwind CSS, Sass, JavaScript, TypeScript, React.js, Next.js, MongoDB, Node.js, and Express.js.
                     In addition to that, I am proficient in using Git, Github I am always eager to learn and improve my skills, not only in the mentioned technologies but also in others, as I have a strong willingness to learn and grow further.
                     </p>
                     <div className='flex justify-center items-center flex-wrap gap-5 text-8xl max-md:text-3xl'>
