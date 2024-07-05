@@ -23,7 +23,7 @@ export default function Projects(){
                         <div className='desc flex flex-col items-center'>
                             <Link target={"_blank"} href={`project/${project._id}`} className='p-3 duration-200 text-white text-sm rounded-xl bg-blue-500 hover:bg-blue-400'>View</Link>
                         </div>
-                        <img className='rounded-tr-3xl rounded-bl-3xl w-[250px]' src={`${project.img}.png`} alt={project.title} />
+                        <img className='rounded-tr-3xl rounded-bl-3xl w-[400px]' src={`${project.img}.png`} alt={project.title} />
                     </span>
                 ))}
             </div>
