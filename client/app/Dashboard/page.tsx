@@ -196,7 +196,7 @@ export default function Dashboard(){
             <main className='flex flex-col items-center gap-20'>
                 <Header />
                 {!isLoggedIn ?
-                    <div className='p-10 flex flex-col items-center justify-center gap-10 mt-48'>
+                    <div className='min-h-screen p-10 flex flex-col items-center justify-center gap-10 mt-48'>
                     <input autoFocus type='text' name='userName' value={loginForm.userName} onChange={(e) => handleLoginFormChange(e)} placeholder='UserName' className='bg-slate-200 dark:bg-zinc-700 dark:text-white text-black p-3 border-none outline-none rounded-md' />
                     <input type='password' name='password' value={loginForm.password} onChange={(e) => handleLoginFormChange(e)} placeholder='Password' className='bg-slate-200 dark:bg-zinc-700 dark:text-white text-black p-3 border-none outline-none rounded-md' />
                     {loading ?
