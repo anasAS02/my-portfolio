@@ -59,7 +59,7 @@ export default function Contact(){
     return(
         showContactMe ? 
         <form className='w-fit bg-blue-100 dark:bg-gray-700 p-5 rounded-2xl flex flex-col items-center justify-center gap-4' onSubmit={(e) => sendEmail(e, form)}>
-            <span className='relative ml-auto p-5 bg-blue-200 dark:bg-gray-600 rounded-full hover:bg-red-500 hover:text-white text-red-500 cursor-pointer' onClick={() => {setShowContactMe(false); console.log(showContactMe)}}>
+            <span className='relative ml-auto p-5 bg-blue-200 dark:bg-gray-600 rounded-full hover:bg-red-500 hover:text-white text-red-500 cursor-pointer' onClick={() => setShowContactMe(false)}>
                 <FontAwesomeIcon icon={faXmark} className='absolute right-3 top-3 w-4 h-4 duration-200' />
             </span>
             <input required autoFocus type='text' name='name' value={form.name} onChange={(e) => handleChange(e)} placeholder='Your name' className='bg-slate-200 text-black px-8 py-3 border-none outline-none rounded-md' />
