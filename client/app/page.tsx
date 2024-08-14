@@ -44,13 +44,15 @@ export default function Home() {
 
   return (
     <ThemeProvider enableSystem={true} attribute='class'>
-      <section id='home'>
+      <section id='home' className='relative'>
         <Header />
         <Landing />
         <About />
         <Projects />
-        <Contact />
         <Footer />
+        <div className='fixed right-5 bottom-5 flex flex-col justify-center items-center gap-2'>
+          <Contact />
+        </div>
       </section>
     </ThemeProvider>
   )
