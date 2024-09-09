@@ -5,6 +5,7 @@ import { useState } from "react"
 import { SEND_EMAIL } from "../Utils/Apis";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { Flip } from "react-awesome-reveal";
 
 export default function Contact(){
     const [showContactMe, setShowContactMe] = useState<boolean>(false);
@@ -78,9 +79,11 @@ export default function Contact(){
             {error && <p className='px-8 py-3 bg-black dark:bg-white text-red-600 rounded-md text-center text-lg'>{error}</p>}
         </form>
         :
-        <div className='flex flex-col justify-center items-center gap-2'>
-            <FontAwesomeIcon icon={faComment} className='cursor-pointer w-10 h-10 duration-200 hover:text-blue-500 dark:hover:text-yellow-500 dark:text-white text-black' onClick={() => setShowContactMe(true)} />
-            <p className='dark:text-white font-bold text-lg uppercase select-none'>Contact me</p>
-        </div>
+        <Flip>
+            <div className='flex flex-col justify-center items-center gap-2'>
+                <FontAwesomeIcon icon={faComment} className='cursor-pointer w-10 h-10 duration-200 hover:text-blue-500 dark:hover:text-yellow-500 dark:text-white text-black' onClick={() => setShowContactMe(true)} />
+                <p className='dark:text-white font-bold text-lg uppercase select-none'>Contact me</p>
+            </div>
+        </Flip>
     )
 }
