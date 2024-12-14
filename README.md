@@ -1,10 +1,10 @@
 # Portfolio
 
-![Portfolio Banner](https://via.placeholder.com/1200x400?text=Portfolio+Website)
+![Portfolio Banner](https://i.imgur.com/MWQnyTY.png.png)
 
 > A personal portfolio website to showcase my work, experiences, and contact details.
 
-[![Live Preview](https://i.imgur.com/MWQnyTY.png.png) [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+[![Live Preview](https://img.shields.io/badge/Live-Preview-brightgreen?style=for-the-badge)](https://anas-portfolio-vercel.vercel.app/) [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
 ---
 
