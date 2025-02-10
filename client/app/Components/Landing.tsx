@@ -22,7 +22,7 @@ export default function Landing(){
                 />
                 <p className='text-2xl max-md:text-sm'>I enjoy building new projects daily and constantly strive to learn more.</p>
                 <Flip>
-                    <Link href='https://drive.usercontent.google.com/download?id=1I8B8B-h2UxTaV8ARLEbOpzvv95Ig-_pS&export=download'
+                    <Link href='https://drive.usercontent.google.com/u/0/uc?id=15wyAswjfj4GhMD4r08v_6H3MZCTFU8Ig&export=download'
                     className='flex items-center gap-3 duration-300 dark:bg-white dark:hover:bg-yellow-500 dark:text-blue-500 dark:hover:text-white bg-blue-400 hover:bg-blue-300 text-white p-5 max-md:p-2 rounded-xl cursor-pointer'
                     >
                         Download CV
